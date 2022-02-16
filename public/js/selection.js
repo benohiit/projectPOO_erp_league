@@ -1,13 +1,15 @@
 
 const main = document.getElementById('main');
 
-fetch("champions.json")
+fetchFromLocalJson().then((data) => {    
+
+/* fetch("../public/json/champions.json")
 .then((response) => {
     return response.json()
     })
 
 .then((data) => {
-    //console.log(data);
+    //console.log(data); */
     
     for (var i = 0; i<data.length; i++ ){
         var img = new Image();
@@ -23,17 +25,16 @@ fetch("champions.json")
         newDiv.appendChild(newTitle);
         newDiv.appendChild(newP);
         newDiv.appendChild(img); 
-        //newDiv.appendChild(document.createTextNode(data[i].description));    a mettre dans un ::hover peut etre ?
         newDiv.appendChild(document.createElement("br"));
         newDiv.appendChild(document.createTextNode("Type: "));
         
         var icon1 = new Image();
-        icon1.src = "../img/"+data[i].tags[0] +"_icon.png"; 
+        icon1.src = "./public/img/"+data[i].tags[0] +"_icon.png"; 
         newDiv.appendChild(icon1);
         
         if(data[i].tags[1]){
             var icon2 = new Image();
-            icon2.src = "../img/"+data[i].tags[1] +"_icon.png"; 
+            icon2.src = "./public/img/"+data[i].tags[1] +"_icon.png"; 
             newDiv.appendChild(icon2);
         }        
                         
@@ -71,7 +72,7 @@ fetch("champions.json")
             profile.appendChild(imgSelected);
 
             var type = new Image();
-            type.src = "../img/"+champ.tags[0] +"_icon.png"; 
+            type.src = "./public/img/"+champ.tags[0] +"_icon.png"; 
             type.style.width = '50px';
             type.style.height = '50px';
             profile.appendChild(document.createElement("br"));
@@ -83,17 +84,19 @@ fetch("champions.json")
             tittleStats.appendChild(document.createTextNode("Stats:")); 
             stats.appendChild(tittleStats);*/
             var allStats = document.createElement('p'); 
-            allStats.appendChild(document.createTextNode("HP: " + ((champ.tags[0] == "Fighter")  ? champ.stats.hp *2 : champ.stats.hp)));
+            allStats.appendChild(document.createTextNode("HP: " + ((champ.tags[0] == "Fighter")  ? champ.stats.hp *2 : (champ.tags[0] == "Tank" ? champ.stats.hp *4 : ( champ.tags[0] == "Assassin" ? champ.stats.hp /2 : champ.stats.hp)))));
             allStats.appendChild(document.createElement("br"));
             allStats.appendChild(document.createTextNode("Mana: " + ((champ.tags[0] == "Support") ? champ.stats.mp *2 : champ.stats.mp)));
             allStats.appendChild(document.createElement("br"));
             allStats.appendChild(document.createTextNode("Power: " + ((champ.tags[0] == "Mage") ? 100 : champ.tags[0] == "Support" ? 40 : 0)));
             allStats.appendChild(document.createElement("br"));
-            allStats.appendChild(document.createTextNode("Attack damage: " + ((champ.tags[0] == "Assassin") ? champ.stats.attackdamage *4 : champ.tags[0] == "Fighter" ? champ.stats.attackdamage *2 : champ.stats.attackdamage )));
+            allStats.appendChild(document.createTextNode("Attack damage: " + ((champ.tags[0] == "Assassin") ? champ.stats.attackdamage *4 : champ.tags[0] == "Fighter" ? champ.stats.attackdamage *2 : ((champ.tags[0] == "Mage") ? champ.stats.attackdamage /4 : champ.stats.attackdamage ))));
             allStats.appendChild(document.createElement("br"));
             allStats.appendChild(document.createTextNode("Attack speed: " + ((champ.tags[0] == "Marksman") ? champ.stats.attackspeed *2 : champ.stats.attackspeed )));
             allStats.appendChild(document.createElement("br"));
             allStats.appendChild(document.createTextNode("Attack range: " + ((champ.tags[0] == "Marksman") ? champ.stats.attackrange *2 : champ.stats.attackrange)));
+            allStats.appendChild(document.createElement("br"));
+            allStats.appendChild(document.createTextNode("Critic damages: " + ((champ.tags[0] == "Marksman") ? champ.stats.crit + 0.1 : ( (champ.tags[0] == "Assassin") ? champ.stats.crit + 0.25 : 0))));
             allStats.appendChild(document.createElement("br"));
             allStats.appendChild(document.createTextNode("Move speed: " + ((champ.tags[0] == "Tank") ? champ.stats.movespeed /2 : champ.tags[0] == "Assassin" ? champ.stats.movespeed *4 : champ.stats.movespeed)));
             allStats.appendChild(document.createElement("br"));
@@ -103,15 +106,19 @@ fetch("champions.json")
             allStats.appendChild(document.createElement("br"));
             allStats.appendChild(document.createTextNode("Hp regen: " + ((champ.tags[0] == "Tank") ? champ.stats.armor *2 : champ.stats.hpregen)));
             allStats.appendChild(document.createElement("br"));
+            allStats.appendChild(document.createElement("br"));
 
             stats.appendChild(allStats);
-
-
             
+            var btnSelect = document.querySelector(".pick");
+            btnSelect.addEventListener('click', function(event) {
+                window.location.assign('main.html?champ='+ champ.name);
+
+            });            
 
         });
     }
-});
+}); 
 
 
 

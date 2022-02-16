@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <script src="./public/js/jsonFunctions.js" ></script>
+    <script type="module" src="./public/js/main.js" defer></script>
+    <title>Piltover adventure</title>
+</head>
+<body>
+    <header></header>
+    <section id="heroes-selection">
+      <div class="row">
+        <div class="col-md-3">
+          <h2 class="theChamp"></h2>          
+          <div id="heroes"></div>
+        </div>
+        <div class="col-md-6" id="theMap">
+          <canvas id="worldmap"></canvas>
+          <!-- <img src="./public/img/map.png"  class="worldmap"> -->
+          
+        </div>
+        <div class="col-xl-3">
+          Next level : 
+          <button class="btn" id="buttonChoice" disabled>Select</button>
+        </div>
+
+      </div>
+      <!-- <button class="btn" id="buttonChoice" disabled>Select</button> -->
+      <!-- <h2>Monsters</h2>
+      <div id="monsters"></div> -->
+    </section>
+    
+</body>
+</html>

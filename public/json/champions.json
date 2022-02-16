@@ -31,6 +31,7 @@
       "attackspeed": 0.651
     },
     "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Aatrox.png",
+    "img": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 0,
@@ -70,6 +71,7 @@
       "attackspeed": 0.668
     },
     "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Ahri.png",
+    "img": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ahri_0.jpg",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 48,
@@ -108,6 +110,7 @@
       "attackspeed": 0.625
     },
     "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Akali.png",
+    "img": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 96,
@@ -147,6 +150,7 @@
       "attackspeed": 0.625
     },
     "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Alistar.png",
+    "img": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Alistar_0.jpg",
     "sprite": {
       "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
       "x": 144,
@@ -348,7 +352,7 @@
     "description": "Iceborn warmother of the Avarosan tribe, Ashe commands the most populous horde in the north. Stoic, intelligent, and idealistic, yet uncomfortable with her role as leader, she taps into the ancestral magics of her lineage to wield a bow of True Ice..."
   },
   {
-    "id": "aurelionsol",
+    "id": "aurelion sol",
     "key": "136",
     "name": "Aurelion Sol",
     "title": "The Star Forger",
