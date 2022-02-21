@@ -434,8 +434,15 @@ section {
   display: block;
 }
 /*# sourceMappingURL=style.css.map */
-
+#theMap{
+  height: 70vh;
+  text-align: center;
+}
 #worldmap{
-  width: 78%;
-  height: 100%;
+  width: 700px;
+  height: 650px;
+}
+
+.hero-card-container{
+  width: 100%;
 }

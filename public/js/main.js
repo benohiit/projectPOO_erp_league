@@ -116,7 +116,7 @@ Support =       2x power            & 4x mana
 // Create map with the level depending of the maplvl of the champ
 
 // call the infos of the json
-var lvls =  await getMapLvl(champ.maplvl);
+var lvls =  await getMapLvl(champ.maplvl); 
 lvls = lvls[0];
 
 
@@ -134,11 +134,13 @@ imgmap.src = "./public/img/map.png";
 function start() {
   canvas.width = cw;
   canvas.height = ch;
+
+  console.log(cw + " " + ch)
   
   // draw the image on the canvas
   ctx.drawImage(imgmap, 0, 0, cw, ch);
   
-  // darken the image with a 50% black fill
+  // darken the image with a 40% black fill
   ctx.save();
   ctx.globalAlpha = .4;
   ctx.fillStyle = "#021032";
@@ -149,14 +151,26 @@ function start() {
   // and redraw the whole image
   // (the image will draw only in the clipping region)
   ctx.save();
-    ctx.beginPath();
-    ctx.clearRect(lvls.x, lvls.y, lvls.w, lvls.l);
-    ctx.rect(lvls.x, lvls.y, lvls.w, lvls.l);
-    ctx.clip();
-    ctx.drawImage(imgmap, 0, 0, cw, ch);
-    ctx.restore();
-    
-  }
+  ctx.beginPath();
+  ctx.clearRect(lvls.x, lvls.y, lvls.w, lvls.l);
+  ctx.rect(lvls.x, lvls.y, lvls.w, lvls.l);
+
+  ctx.clip();
+  ctx.drawImage(imgmap, 0, 0, cw, ch);
+  ctx.restore();
+  
+}
+
+//texte aside
+let h2Aside = document.createElement('h2');
+let pAside = document.createElement('p');
+const textAside = document.querySelector(".textAside")
+h2Aside.appendChild(document.createTextNode(lvls.name))
+pAside.appendChild(document.createTextNode(lvls.story))
+
+textAside.prepend(pAside)
+textAside.prepend(h2Aside)
+
 
 // Create HTML Cards.
 const heroesCards = cardHtml(currentChamp, 'hero')
@@ -211,40 +225,3 @@ selectElem.addEventListener('click', function(e) {
 
 })();
 
-
-var canvas = document.getElementById("worldmap");
-var ctx = canvas.getContext("2d");
-
-var cw = document.getElementById("worldmap").offsetWidth;
-var ch = document.getElementById("worldmap").offsetHeight;
-
-var imgmap = new Image();
-imgmap.onload = start;
-imgmap.src = "./public/img/map.png";
-
-function start() {
-    canvas.width = cw;
-    canvas.height = ch;
-
-    // draw the image on the canvas
-    ctx.drawImage(imgmap, 0, 0, cw, ch);
-
-    // darken the image with a 50% black fill
-    ctx.save();
-    ctx.globalAlpha = .4;
-    ctx.fillStyle = "#021032";
-    ctx.fillRect(0, 0, cw, ch);
-    ctx.restore();
-
-    // ctx.clip() the area to highlight
-    // and redraw the whole image
-    // (the image will draw only in the clipping region)
-    ctx.save();
-    ctx.beginPath();
-    ctx.clearRect(360, 220, 230, 60);
-    ctx.rect(360, 220, 230, 60);
-    ctx.clip();
-    ctx.drawImage(imgmap, 0, 0, cw, ch);
-    ctx.restore();
-
-}

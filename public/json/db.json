@@ -1,63 +1,94 @@
 {
-  "map" : [
+  "map": [
     {
       "id": 1,
-      "name" : "The Stuntie Gate's outpost",
-      "x": 70,
-      "y": 45,
-      "w": 120,
-      "l": 50
+      "name": "The Stuntie Gate's outpost",
+      "story": "Au sud du mur, un avant post résiste mené par Guldan le casseur. C'est a vous de le mettre en déroute. Débarassez vous-en !",
+      "x": 40,
+      "y": 60,
+      "w": 140,
+      "l": 100,
+      "monsters": [
+        "Guldan"
+      ]
     },
     {
       "id": 2,
-      "name" : "Death eaters",
+      "name": "Death eaters",
+      "story": "Une troupe de mangeur de mort barre la route et sème le chaos dans la vallée, il est temps de tous les exterminer",
       "x": 200,
-      "y": 35,
+      "y": 70,
       "w": 70,
-      "l": 80
+      "l": 120,
+      "monsters": [
+        "monster1",
+        "monster1",
+        "monster1"
+      ]
     },
     {
       "id": 3,
-      "name" : "The Stuntie village defense",
+      "name": "The Stuntie village defense",
+      "story": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus placeat dolore incidunt in ullam ratione nobis doloribus. Voluptatibus quibusdam illo distinctio, repellat tempore, laboriosam voluptate vitae alias quis dolor excepturi?",
       "x": 10,
-      "y": 130,
+      "y": 230,
       "w": 120,
-      "l": 60
+      "l": 120,
+      "monsters": [
+        "monster2",
+        "monster2"
+      ]
     },
     {
       "id": 4,
-      "name" : "The wood chopper camp",
-      "x": 170,
-      "y": 210,
+      "name": "The wood chopper camp",
+      "story": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus placeat dolore incidunt in ullam ratione nobis doloribus. Voluptatibus quibusdam illo distinctio, repellat tempore, laboriosam voluptate vitae alias quis dolor excepturi?",
+      "x": 160,
+      "y": 370,
       "w": 100,
-      "l": 50
+      "l": 100,
+      "monsters": [
+        "butcher"
+      ]
     },
     {
       "id": 5,
-      "name" : "The WARBOSS Grunt",
-      "x": 450,
-      "y": 310,
+      "name": "The WARBOSS Grunt",
+      "story": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus placeat dolore incidunt in ullam ratione nobis doloribus. Voluptatibus quibusdam illo distinctio, repellat tempore, laboriosam voluptate vitae alias quis dolor excepturi?",
+      "x": 420,
+      "y": 540,
       "w": 100,
-      "l": 35
+      "l": 70,
+      "monsters": [
+        "Garrosh"
+      ]
     },
     {
       "id": 6,
-      "name" : "The IronCrew Gobbus",
-      "x": 500,
-      "y": 280,
+      "name": "The IronCrew Gobbus",
+      "story": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatibus placeat dolore incidunt in ullam ratione nobis doloribus. Voluptatibus quibusdam illo distinctio, repellat tempore, laboriosam voluptate vitae alias quis dolor excepturi?",
+      "x": 470,
+      "y": 480,
       "w": 90,
-      "l": 30
+      "l": 60,
+      "monsters": [
+        "monster1",
+        "monster2",
+        "butcher"
+      ]
     },
     {
       "id": 7,
-      "name" : "Meet DEATHWING in the Mount Bloodhorn",
-      "x": 360,
-      "y": 220,
-      "w": 230,
-      "l": 60
+      "name": "Meet DEATHWING in the Mount Bloodhorn",
+      "story": "Deathwing, alias les ailes de la mort, le seigneur de tous les dragons du chaos. Le temps est venu d'anihiler son emprise sur l'empire.",
+      "x": 340,
+      "y": 380,
+      "w": 220,
+      "l": 110,
+      "monsters": [
+        "deathwing"
+      ]
     }
-
-    
   ],
   "champs": [
     {
@@ -99,6 +130,86 @@
       "description": "Innately connected to the latent power of Runeterra, Ahri is a vastaya who can reshape magic into orbs of raw energy. She revels in toying with her prey by manipulating their emotions before devouring their life essence. Despite her predatory nature...",
       "lvl": 1,
       "maplvl": 7
+    },
+    {
+      "id": "akali",
+      "key": "84",
+      "name": "Akali",
+      "title": "the Rogue Assassin",
+      "tags": "Assassin",
+      "stats": {
+        "hp": 575,
+        "hpperlevel": 95,
+        "mp": 200,
+        "mpperlevel": 0,
+        "movespeed": 345,
+        "armor": 23,
+        "armorperlevel": 3.5,
+        "spellblock": 37,
+        "spellblockperlevel": 1.25,
+        "attackrange": 125,
+        "hpregen": 8,
+        "hpregenperlevel": 0.5,
+        "mpregen": 50,
+        "mpregenperlevel": 0,
+        "crit": 0,
+        "critperlevel": 0,
+        "attackdamage": 62.4,
+        "attackdamageperlevel": 3.3,
+        "attackspeedperlevel": 3.2,
+        "attackspeed": 0.625,
+        "spell": 50
+      },
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Akali.png",
+      "img": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Akali_0.jpg",
+      "sprite": {
+        "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
+        "x": 96,
+        "y": 0
+      },
+      "description": "Abandoning the Kinkou Order and her title of the Fist of Shadow, Akali now strikes alone, ready to be the deadly weapon her people need. Though she holds onto all she learned from her master Shen, she has pledged to defend Ionia from its enemies, one...",
+      "lvl": 1,
+      "maplvl": 1
+    },
+    {
+      "id": "aatrox",
+      "key": "266",
+      "name": "Aatrox",
+      "title": "the Darkin Blade",
+      "tags": "Fighter",
+      "stats": {
+        "hp": 580,
+        "hpperlevel": 90,
+        "mp": 0,
+        "mpperlevel": 0,
+        "movespeed": 345,
+        "armor": 38,
+        "armorperlevel": 3.25,
+        "spellblock": 32.1,
+        "spellblockperlevel": 1.25,
+        "attackrange": 175,
+        "hpregen": 3,
+        "hpregenperlevel": 1,
+        "mpregen": 0,
+        "mpregenperlevel": 0,
+        "crit": 0,
+        "critperlevel": 0,
+        "attackdamage": 60,
+        "attackdamageperlevel": 5,
+        "attackspeedperlevel": 2.5,
+        "attackspeed": 0.651,
+        "spell": 50
+      },
+      "icon": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/champion/Aatrox.png",
+      "img": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aatrox_0.jpg",
+      "sprite": {
+        "url": "http://ddragon.leagueoflegends.com/cdn/10.23.1/img/sprite/champion0.png",
+        "x": 0,
+        "y": 0
+      },
+      "description": "Once honored defenders of Shurima against the Void, Aatrox and his brethren would eventually become an even greater threat to Runeterra, and were defeated only by cunning mortal sorcery. But after centuries of imprisonment, Aatrox was the first to find...",
+      "lvl": 1,
+      "maplvl": 1
     }
   ]
 }
